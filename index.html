@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+	</head>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+var cx = 100
+var cy = 75
+var r = 50
+ctx.beginPath();
+ctx.arc(cx, cy, r, 0, 2 * Math.PI);
+ctx.moveTo(cx - r, cy);
+ctx.lineTo(cx + r, cy);
+
+ctx.moveTo(cx + r - 1, cy);
+ctx.lineTo(cx + r - 1, cy - Math.sqrt(2*r -1));
+
+ctx.stroke();
+</script> 
+
+</body>
+</html>
+
